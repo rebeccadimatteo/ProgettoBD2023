@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/main.css') }}">
+    <meta charset="UTF-8">
+    <title>AppleStore</title>
+</head>
+<body style="margin: 0px;">
+    <!-- Header -->
+    <div class="header">
+    
+        <div>
+            <a href="#queries" >Apple Store</a>
+        </div>
+    </div>
+    <!-- Intro -->
+    <div id="home">
+        <div id="content">
+           
+        </div>
+    </div>
+    <!-- Queries -->
+    <div id="queries">
+        <div class="query-container">
+            <h1 >Inserisci un nuovo oggetto</h1>
+            <form action="/query1" method="post" >
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" required><br><br>
+        
+                <label for="track_name">Nome della traccia:</label>
+                <input type="text" id="track_name" name="track_name" required><br><br>
+        
+                <label for="size_bytes">Dimensione in byte:</label>
+                <input type="number" id="size_bytes" name="size_bytes" required><br><br>
+        
+                <label for="currency">Valuta:</label>
+                <input type="text" id="currency" name="currency" required><br><br>
+        
+                <label for="price">Prezzo:</label>
+                <input type="number" id="price" name="price" step="0.01" required><br><br>
+        
+                <label for="rating_count_tot">Numero di valutazioni totali:</label>
+                <input type="number" id="rating_count_tot" name="rating_count_tot" required><br><br>
+        
+                <label for="rating_count_ver">Numero di valutazioni per la versione:</label>
+                <input type="number" id="rating_count_ver" name="rating_count_ver" required><br><br>
+        
+                <label for="user_rating">Valutazione dell'utente:</label>
+                <input type="number" id="user_rating" name="user_rating" step="0.1" required><br><br>
+        
+                <label for="user_rating_ver">Valutazione dell'utente per la versione:</label>
+                <input type="number" id="user_rating_ver" name="user_rating_ver" step="0.1" required><br><br>
+        
+                <label for="ver">Versione:</label>
+                <input type="text" id="ver" name="ver" required><br><br>
+        
+                <label for="cont_rating">Valutazione del contenuto:</label>
+                <input type="text" id="cont_rating" name="cont_rating" required><br><br>
+        
+                <label for="prime_genre">Genere principale:</label>
+                <input type="text" id="prime_genre" name="prime_genre" required><br><br>
+        
+                <label for="sup_devices">Numero di dispositivi supportati:</label>
+                <input type="number" id="sup_devices" name="sup_devices" required><br><br>
+        
+                <label for="ipadSc_urls">Numero di URL per iPad:</label>
+                <input type="number" id="ipadSc_urls" name="ipadSc_urls" required><br><br>
+        
+                <label for="lang">Numero di lingue supportate:</label>
+                <input type="number" id="lang" name="lang" required><br><br>
+        
+                <label for="vpp_lic">Licenza VPP:</label>
+                <input type="number" id="vpp_lic" name="vpp_lic" required><br><br>
+        
+                <button type="submit">Esegui Query</button>
+            </form>
+              
+        </div>
+        
+        <div class="query-container">
+            <h1 >Scegli il prezzo in base al quale rappresentare gli oggetti</h1>
+            <form action="/query2" method="POST">
+                <label for="price">Inserisci il prezzo desiderato:</label>
+                <input type="number" step="0.01" name="price" id="price" required>
+                <br>
+                <input type="submit" value="Esegui Query">
+            </form>
+              
+        </div>
+        
+        <div class="query-container">
+            <h1 >Digita il nome dell'oggetto di cui vuoi modificare il prezzo </h1>
+            <form action="/query3" method="POST">
+                <label for="nome_oggetto">Nome Oggetto:</label>
+                <input type="text" id="nome_oggetto" name="nome_oggetto" required><br><br>
+                
+                <label for="nuovo_prezzo">Nuovo Prezzo:</label>
+                <input type="text" id="nuovo_prezzo" name="nuovo_prezzo" required><br><br>
+                
+                <input type="submit" value="Esegui query">
+            </form>
+              
+        </div>
+        <div class="query-container">
+            <h1 >Filtra Prezzo e Valutazione</h1>
+            <form action="/query4" method="post">
+                <label for="prezzo">Prezzo:</label>
+                <input type="text" id="prezzo" name="prezzo" required><br><br>
+        
+                <label for="valutazione">Valutazione:</label>
+                <input type="text" id="valutazione" name="valutazione" required><br><br>
+        
+                <input type="submit" value="Esegui query">
+            </form>
+            </div>
+        <div class="query-container">
+            <h1>Cancellazione Oggetto</h1>
+    <form action="/query5" method="post">
+        <label for="id_oggetto">ID Oggetto che vuoi cancellare:</label>
+        <input type="text" id="id_oggetto" name="id_oggetto" required><br><br>
+
+        <input type="submit" value="Esegui query">
+    </form>
+        </div>
+        <div class="query-container">
+            <h1 >Filtra Genere, Versione, Valutazione</h1>
+            <form action="/query6" method="post">
+                <label for="genere">Genere:</label>
+                <input type="text" id="genere" name="genere" required><br><br>
+        
+                <label for="versione">Versione:</label>
+                <input type="text" id="versione" name="versione" required><br><br>
+        
+                <label for="valutazione">Valutazione:</label>
+                <input type="text" id="valutazione" name="valutazione" required><br><br>
+        
+                <input type="submit" value="Esegui query">
+            </form>
+            </div>
+        <div class="query-container">
+            <h1>Modifica Nome, Prezzo, Valutazione dell'oggetto</h1>
+            <form action="/query7" method="POST">
+                <label for="id_oggetto">ID Oggetto:</label>
+                <input type="text" name="id_oggetto" id="id_oggetto" required><br>
+                
+                <label for="nuovo_nome">Nuovo Nome:</label>
+                <input type="text" name="nuovo_nome" id="nuovo_nome" required><br>
+                
+                <label for="nuovo_prezzo">Nuovo Prezzo:</label>
+                <input type="text" name="nuovo_prezzo" id="nuovo_prezzo" required><br>
+                
+                <label for="nuova_valutazione">Nuova Valutazione:</label>
+                <input type="text" name="nuova_valutazione" id="nuova_valutazione" required><br>
+                
+                <input type="submit" value="Modifica">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

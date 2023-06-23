@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query 2 </title>
+    <div>
+        <a href="http://127.0.0.1:5005" >Apple Store</a>
+    </div>
+</head>
+<body>
+    <h2>App con prezzo uguale a {{ prezzo }}</h2>
+    <ul>
+        {% for risultato in risultati %}
+        <li>
+            <strong>Track Name:</strong> {{ risultato.track_name }}<br>
+            <strong>Size Bytes:</strong> {{ risultato.size_bytes }}<br>
+            <strong>Currency:</strong> {{ risultato.currency }}<br>
+            <strong>Price:</strong> {{ risultato.price }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
