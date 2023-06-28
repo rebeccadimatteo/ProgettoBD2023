@@ -1,8 +1,33 @@
-Questo progetto è stato sviluppato per l'esame di basi dati II utilizza le seguente tecnologie
+TECNLOGIE UTILIZZATE
+Questo progetto è stato sviluppato per l'esame di basi dati II utilizza le seguente tecnologie:
 flask-2.1.3
 pymongo-4.1.1
-E' sviluppato su un dataset Apple store contiene diverse caratteristiche di delle applicazioni presenti sull'apple store
 
+RACCOLTA REQUISITI
+Sono state sviluppate delle query su un dataset denominato Applestore che contiene  
+diverse caratteristiche sulle app apple.
+
+
+CARATTERISTICHE APP:
+
+id:281796108
+track_name:"Evernote - stay organized"
+size_bytes:158578688
+currency:"USD"
+price:"400"
+rating_count_tot:161065
+rating_count_ver:26
+user_rating:4
+user_rating_ver:3.5
+ver:"8.2.2"
+cont_rating:"4+"
+prime_genre:"Productivity"
+sup_devices:Object
+ipadSc_urls:Object
+lang Object vpp_lic :1
+
+
+QUERY SVILUPPATE
 Sono state sviluppate 7 query
 
 1 inserimento di una nuova app nel database
